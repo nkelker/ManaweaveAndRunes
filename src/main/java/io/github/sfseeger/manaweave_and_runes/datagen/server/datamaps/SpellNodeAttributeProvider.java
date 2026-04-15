@@ -12,9 +12,9 @@ import net.neoforged.neoforge.common.data.DataMapProvider;
 import java.util.function.Supplier;
 
 public class SpellNodeAttributeProvider implements IDataMapRegistrar {
-    private static ResourceKey<AbstractSpellNode> createResourceKey(Supplier<AbstractSpellNode> spellNode) {
+    private static <T extends AbstractSpellNode> ResourceKey<AbstractSpellNode> createResourceKey(Supplier<T> spellNode) {
         return ResourceKey.create(ManaweaveAndRunesRegistries.SPELL_NODE_REGISTRY_KEY,
-                                  spellNode.get().getRegistryName());
+                spellNode.get().getRegistryName());
     }
 
     @Override
@@ -22,18 +22,19 @@ public class SpellNodeAttributeProvider implements IDataMapRegistrar {
         DataMapProvider.Builder<SpellNodeAttributes, AbstractSpellNode> builder =
                 provider.builder(SpellNodeAttributes.SPELL_NODE_ATTRIBUTES);
         addAttributes(builder, SpellNodeInit.SPELL_TYPE_PROJECTILE, SpellNodeAttributes.builder(10).withCost(
-                Manas.AirMana, 5).withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN).build());
+                Manas.AirMana, 5).withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN).withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN).build());
 
         addAttributes(builder, SpellNodeInit.SPELL_TYPE_SELF,
-                      SpellNodeAttributes.builder(3).withCost(Manas.EarthMana, 3).build());
+                SpellNodeAttributes.builder(3).withCost(Manas.EarthMana, 3).withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN).build());
         addAttributes(builder, SpellNodeInit.SPELL_TYPE_TOUCH,
-                      SpellNodeAttributes.builder(5).withCost(Manas.EarthMana, 3).build());
-        addAttributes(builder, SpellNodeInit.SPELL_TYPE_RUNE, SpellNodeAttributes.builder(15)
-                .withCost(Manas.EarthMana, 3)
+                SpellNodeAttributes.builder(5).withCost(Manas.EarthMana, 3).withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN).build());
+        addAttributes(builder, SpellNodeInit.SPELL_TYPE_RUNE, SpellNodeAttributes.builder(25)
+                .withCost(Manas.EarthMana, 10)
+                .withCost(Manas.OrderMana, 2)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_ELONGATE)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_WIDEN)
+                .withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN)
                 .build());
-
 
         addAttributes(builder, SpellNodeInit.SPELL_EFFECT_BREAK, SpellNodeAttributes.builder(8)
                 .withCost(Manas.EarthMana, 4)
@@ -42,53 +43,57 @@ public class SpellNodeAttributeProvider implements IDataMapRegistrar {
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_WIDEN)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_ELONGATE)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_DELICATE)
+                .withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_EFFECT_BURN, SpellNodeAttributes.builder(8)
                 .withCost(Manas.FireMana, 4)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_EFFECT_EXPLODE, SpellNodeAttributes.builder(12)
-                .withCost(Manas.FireMana, 6)
-                .withCost(Manas.EntropyMana, 4)
+                .withCost(Manas.FireMana, 15)
+                .withCost(Manas.EntropyMana, 8)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_WIDEN)
+                .withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_EFFECT_HEAL, SpellNodeAttributes.builder(6)
-                .withCost(Manas.WaterMana, 4)
+                .withCost(Manas.WaterMana, 8)
+                .withCost(Manas.OrderMana, 2)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_DELICATE)
+                .withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_EFFECT_HARM, SpellNodeAttributes.builder(6)
-                .withCost(Manas.EntropyMana, 4)
+                .withCost(Manas.VoidMana, 2)
+                .withCost(Manas.EntropyMana, 2)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_DELICATE)
+                .withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_EFFECT_PUSH, SpellNodeAttributes.builder(6)
                 .withCost(Manas.AirMana, 4)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_STRENGTHEN)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_WIDEN)
                 .withModifier(SpellNodeInit.SPELL_MODIFIER_ELONGATE)
+                .withModifier(SpellNodeInit.SPELL_MODIFIER_HASTEN)
                 .build());
 
         addAttributes(builder, SpellNodeInit.SPELL_MODIFIER_STRENGTHEN, SpellNodeAttributes.builder(4)
-                .withCost(Manas.EntropyMana, 2)
+                .withCost(Manas.EarthMana, 4)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_MODIFIER_WIDEN, SpellNodeAttributes.builder(4)
                 .withCost(Manas.AirMana, 2)
                 .build());
         addAttributes(builder, SpellNodeInit.SPELL_MODIFIER_ELONGATE, SpellNodeAttributes.builder(4)
-                .withCost(Manas.WaterMana, 2)
+                .withCost(Manas.AirMana, 2)
                 .build());
-        addAttributes(builder, SpellNodeInit.SPELL_MODIFIER_DELICATE, SpellNodeAttributes.builder(4)
-                .withCost(Manas.SoulMana, 2)
+        addAttributes(builder, SpellNodeInit.SPELL_MODIFIER_DELICATE, SpellNodeAttributes.builder(1)
+                .withCost(Manas.OrderMana, 1)
                 .build());
+        addAttributes(builder, SpellNodeInit.SPELL_MODIFIER_HASTEN, SpellNodeAttributes.builder(-4).withCost(Manas.OrderMana, 4).build());
     }
 
-    private void addAttributes(DataMapProvider.Builder<SpellNodeAttributes, AbstractSpellNode> builder, Holder<AbstractSpellNode> node, SpellNodeAttributes attributes) {
-        builder.add(node, attributes, false);
-    }
-
-    private void addAttributes(DataMapProvider.Builder<SpellNodeAttributes, AbstractSpellNode> builder, Supplier<AbstractSpellNode> node, SpellNodeAttributes attributes) {
+    private <T extends AbstractSpellNode> void addAttributes(DataMapProvider.Builder<SpellNodeAttributes, AbstractSpellNode> builder, Supplier<T> node, SpellNodeAttributes attributes) {
         builder.add(createResourceKey(node), attributes, false);
     }
 }

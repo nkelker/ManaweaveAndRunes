@@ -51,12 +51,12 @@
     "minecraft:cactus": {
       "mana": [
         {
-          "amount": 8,
-          "manaType": "manaweave_and_runes:water_mana"
-        },
-        {
           "amount": 4,
           "manaType": "manaweave_and_runes:entropy_mana"
+        },
+        {
+          "amount": 8,
+          "manaType": "manaweave_and_runes:water_mana"
         }
       ]
     },
@@ -143,12 +143,12 @@
     "minecraft:flint_and_steel": {
       "mana": [
         {
-          "amount": 35,
-          "manaType": "manaweave_and_runes:fire_mana"
-        },
-        {
           "amount": 12,
           "manaType": "manaweave_and_runes:entropy_mana"
+        },
+        {
+          "amount": 35,
+          "manaType": "manaweave_and_runes:fire_mana"
         }
       ]
     },
@@ -167,36 +167,36 @@
     "minecraft:glowstone_dust": {
       "mana": [
         {
-          "amount": 20,
-          "manaType": "manaweave_and_runes:fire_mana"
-        },
-        {
           "amount": 10,
           "manaType": "manaweave_and_runes:order_mana"
+        },
+        {
+          "amount": 20,
+          "manaType": "manaweave_and_runes:fire_mana"
         }
       ]
     },
     "minecraft:golden_apple": {
       "mana": [
         {
-          "amount": 70,
-          "manaType": "manaweave_and_runes:soul_mana"
-        },
-        {
           "amount": 100,
           "manaType": "manaweave_and_runes:order_mana"
+        },
+        {
+          "amount": 70,
+          "manaType": "manaweave_and_runes:soul_mana"
         }
       ]
     },
     "minecraft:grass_block": {
       "mana": [
         {
-          "amount": 3,
-          "manaType": "manaweave_and_runes:water_mana"
-        },
-        {
           "amount": 5,
           "manaType": "manaweave_and_runes:earth_mana"
+        },
+        {
+          "amount": 3,
+          "manaType": "manaweave_and_runes:water_mana"
         }
       ]
     },
@@ -204,11 +204,11 @@
       "mana": [
         {
           "amount": 10,
-          "manaType": "manaweave_and_runes:water_mana"
+          "manaType": "manaweave_and_runes:order_mana"
         },
         {
           "amount": 10,
-          "manaType": "manaweave_and_runes:order_mana"
+          "manaType": "manaweave_and_runes:water_mana"
         }
       ]
     },
@@ -227,12 +227,12 @@
     "minecraft:lapis_lazuli": {
       "mana": [
         {
-          "amount": 30,
-          "manaType": "manaweave_and_runes:water_mana"
-        },
-        {
           "amount": 15,
           "manaType": "manaweave_and_runes:order_mana"
+        },
+        {
+          "amount": 30,
+          "manaType": "manaweave_and_runes:water_mana"
         }
       ]
     },
@@ -287,12 +287,12 @@
     "minecraft:netherite_ingot": {
       "mana": [
         {
-          "amount": 80,
-          "manaType": "manaweave_and_runes:fire_mana"
-        },
-        {
           "amount": 200,
           "manaType": "manaweave_and_runes:entropy_mana"
+        },
+        {
+          "amount": 80,
+          "manaType": "manaweave_and_runes:fire_mana"
         }
       ]
     },
