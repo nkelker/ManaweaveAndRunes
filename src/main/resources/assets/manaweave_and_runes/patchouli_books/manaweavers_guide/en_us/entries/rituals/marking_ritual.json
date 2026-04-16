@@ -1,0 +1,16 @@
+  {
+  "name": "Marking Ritual",
+  "icon": "minecraft:writable_book",
+  "category": "manaweave_and_runes:rituals_category",
+  "advancement": "manaweave_and_runes:rituals/marking_ritual",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Apply one of the Mark Effects to a Player. (Link effects?)" 
+    },
+    {
+      "type": "manaweave_and_runes:ritual_input",
+      "ritual": "manaweave_and_runes:marking_ritual"
+    }
+  ]
+}
