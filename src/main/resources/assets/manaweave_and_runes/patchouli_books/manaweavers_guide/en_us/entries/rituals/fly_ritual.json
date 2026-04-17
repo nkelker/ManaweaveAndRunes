@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Grants the player the ability to fly in an area around the position supplied. Also increases flight speed (?)"
+      "text": "Grants the player the ability to fly in an area around the position supplied."
     },
     {
       "type": "manaweave_and_runes:ritual_input",
