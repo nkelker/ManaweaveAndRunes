@@ -2,7 +2,7 @@
   "name": "Fly Ritual",
   "icon": "minecraft:feather",
   "category": "manaweave_and_runes:rituals_category",
-  "advancement": "manaweave_and_runes:rituals/fly_ritual",
+  "advancement": "manaweave_and_runes:rituals/flight_ritual",
   "pages": [
     {
       "type": "patchouli:text",
@@ -10,7 +10,7 @@
     },
     {
       "type": "manaweave_and_runes:ritual_input",
-      "ritual": "manaweave_and_runes:fly_ritual"
+      "ritual": "manaweave_and_runes:flight_ritual"
     }
   ]
 }

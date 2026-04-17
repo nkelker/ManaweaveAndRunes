@@ -2,7 +2,7 @@
   "name": "Curse Removal Ritual",
   "icon": "minecraft:milk_bucket",
   "category": "manaweave_and_runes:rituals_category",
-  "advancement": "manaweave_and_runes:rituals/curse_removal_ritual",
+  "advancement": "manaweave_and_runes:rituals/remove_curse_ritual",
   "pages": [
     {
       "type": "patchouli:text",
@@ -10,7 +10,7 @@
     },
     {
       "type": "manaweave_and_runes:ritual_input",
-      "ritual": "manaweave_and_runes:curse_removal_ritual"
+      "ritual": "manaweave_and_runes:remove_curse_ritual"
     }
   ]
 }

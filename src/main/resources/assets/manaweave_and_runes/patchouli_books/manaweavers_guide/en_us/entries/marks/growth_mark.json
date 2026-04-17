@@ -1,7 +1,7 @@
 {
   "name": "Mark of Growth",
   "icon": "minecraft:pitcher_plant",
-  "category": "manaweave_and_runes:marks",
+  "category": "manaweave_and_runes:marks_category",
   "advancement": "manaweave_and_runes:marks/growth_mark",
   "pages": [
     {

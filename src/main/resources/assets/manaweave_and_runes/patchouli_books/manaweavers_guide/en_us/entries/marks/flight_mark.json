@@ -1,8 +1,8 @@
 {
   "name": "Mark of Flight",
   "icon": "minecraft:elytra",
-  "category": "manaweave_and_runes:marks",
-  "advancement": "manaweave_and_runes:marks/fly_mark",
+  "category": "manaweave_and_runes:marks_category",
+  "advancement": "manaweave_and_runes:marks/flight_mark",
   "pages": [
     {
       "type": "patchouli:text",
