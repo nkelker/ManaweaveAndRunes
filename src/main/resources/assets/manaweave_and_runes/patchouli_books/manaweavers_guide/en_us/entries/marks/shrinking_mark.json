@@ -2,7 +2,7 @@
   "name": "Mark of Shrinking",
   "icon": "minecraft:azure_bluet",
   "category": "manaweave_and_runes:marks_category",
-  "advancement": "manaweave_and_runes:marks/shrinking_mark",
+  "advancement": "manaweave_and_runes:marks/mark_of_shrinking_ritual",
   "pages": [
     {
       "type": "patchouli:text",

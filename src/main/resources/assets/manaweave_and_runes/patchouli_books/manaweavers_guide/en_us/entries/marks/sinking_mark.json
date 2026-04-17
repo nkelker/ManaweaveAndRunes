@@ -2,7 +2,7 @@
   "name": "Mark of Sinking",
   "icon": "minecraft:anvil",
   "category": "manaweave_and_runes:marks_category",
-  "advancement": "manaweave_and_runes:marks/sinking_mark",
+  "advancement": "manaweave_and_runes:marks/mark_of_sinking_ritual",
   "pages": [
     {
       "type": "patchouli:text",
