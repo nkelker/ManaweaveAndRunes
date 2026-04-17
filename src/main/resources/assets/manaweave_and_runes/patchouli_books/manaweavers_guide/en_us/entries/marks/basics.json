@@ -9,7 +9,7 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "manaweave_and_runes:marks/scrying_pool"
+      "recipe": "manaweave_and_runes:scrying_pool"
     },
     {
         "type":"patchouli:text",
